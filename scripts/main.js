@@ -132,9 +132,11 @@
   /* ── 4. Reveal on scroll ───────────────────────────────── */
 
   if (!reduceMotion && "IntersectionObserver" in window) {
+    // The hero is deliberately excluded: it is the largest paint on the page
+    // and must not depend on JavaScript to become visible.
     var targets = document.querySelectorAll(
-      ".hero__text, .hero__img, .alley .wrap, .hero-item, .menu__item," +
-      " .how__text, .how__img, .scores, .quotes blockquote, .visit__map, .visit__info"
+      ".alley .wrap, .hero-item, .menu, .how__text, .how__img," +
+      " .scores, .quotes blockquote, .visit__map, .visit__info"
     );
 
     var io = new IntersectionObserver(function (entries) {
@@ -143,11 +145,13 @@
         entry.target.classList.add("is-in");
         io.unobserve(entry.target);
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+    // Expanding the root downward starts the fade before the element is
+    // actually on screen, so fast scrolling never lands on a blank section.
+    }, { rootMargin: "0px 0px 12% 0px", threshold: 0.01 });
 
     Array.prototype.forEach.call(targets, function (el, i) {
       el.classList.add("reveal");
-      el.style.transitionDelay = (i % 4) * 60 + "ms";
+      el.style.transitionDelay = (i % 3) * 45 + "ms";
       io.observe(el);
     });
   }

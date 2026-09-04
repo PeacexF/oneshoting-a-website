@@ -57,6 +57,11 @@ button { font: inherit; color: inherit; }
   outline-offset: 3px;
   border-radius: 2px;
 }
+.vh {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
 .skip {
   position: absolute; left: -9999px; top: 0; z-index: 200;
   background: var(--ink); color: var(--salt);
@@ -147,7 +152,10 @@ button { font: inherit; color: inherit; }
   padding: .9rem var(--pad);
   display: flex; align-items: center; gap: 1rem;
 }
-.brand { text-decoration: none; margin-right: auto; line-height: 1.15; }
+.brand {
+  text-decoration: none; margin-right: auto; line-height: 1.15;
+  padding-block: .35rem;
+}
 .brand__name {
   display: block;
   font-family: var(--display);
@@ -156,8 +164,9 @@ button { font: inherit; color: inherit; }
 .brand__sub {
   display: block;
   font-size: .64rem; font-weight: 500;
-  letter-spacing: .15em; text-transform: uppercase;
+  letter-spacing: .13em; text-transform: uppercase;
   color: var(--brine);
+  white-space: nowrap;
 }
 
 .navtoggle {
@@ -206,7 +215,7 @@ button { font: inherit; color: inherit; }
 }
 .hero h1 {
   font-family: var(--display);
-  font-size: clamp(2.3rem, 1.15rem + 5.1vw, 4.6rem);
+  font-size: clamp(2.5rem, 1.5rem + 4.2vw, 4.25rem);
   font-weight: 600;
   letter-spacing: -.025em;
   line-height: 1.02;
@@ -448,7 +457,11 @@ button { font: inherit; color: inherit; }
   display: block; margin-top: .15rem;
   font-size: .82rem; color: rgba(232, 226, 213, .6);
 }
-.facts a { color: var(--salt); text-underline-offset: 3px; }
+/* Phone numbers are a primary action on a phone: keep them thumb-sized. */
+.facts a, .foot__addr a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--salt); text-underline-offset: 3px;
+}
 
 /* ── Footer ────────────────────────────────────────────────── */
 .foot { background: var(--ink); color: var(--salt); padding: clamp(3rem, 7vw, 4.5rem) 0 2rem; }
@@ -464,9 +477,10 @@ button { font: inherit; color: inherit; }
 }
 .foot__brand span { color: var(--brine); }
 .foot__addr { font-size: .92rem; color: rgba(232, 226, 213, .72); margin: 0; }
-.foot__addr a { text-underline-offset: 3px; }
-.foot__nav, .foot__social { display: grid; gap: .6rem; align-content: start; }
+
+.foot__nav, .foot__social { display: grid; gap: .1rem; align-content: start; }
 .foot__nav a, .foot__social a {
+  display: inline-flex; align-items: center; min-height: 44px;
   font-size: .88rem; text-decoration: none;
   color: rgba(232, 226, 213, .72);
   transition: color .18s ease;
@@ -481,10 +495,10 @@ button { font: inherit; color: inherit; }
 }
 
 /* ── Reveal on scroll ──────────────────────────────────────── */
-.js .reveal { opacity: 0; transform: translateY(14px); }
+.js .reveal { opacity: 0; transform: translateY(10px); }
 .js .reveal.is-in {
   opacity: 1; transform: none;
-  transition: opacity .7s ease, transform .7s cubic-bezier(.22, .8, .3, 1);
+  transition: opacity .5s ease, transform .5s cubic-bezier(.22, .8, .3, 1);
 }
 
 /* ── Breakpoints ───────────────────────────────────────────── */
