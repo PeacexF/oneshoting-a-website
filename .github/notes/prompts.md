@@ -47,3 +47,9 @@ holyy why so many tokens tho
 
 ### 5.
 > include the screenshot into the README
+
+### 6.
+>is it finished? your work, your call here. after you say it's finished i'll evaluate the website and ask you questions about the build. be sure here.
+>doing a lot of changes is not ideal, as it'll break the point of the original "one shot" check
+
+Claude's response - "Yes — it's finished. I'm not making further changes."
