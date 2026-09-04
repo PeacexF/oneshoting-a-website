@@ -55,3 +55,7 @@ holyy why so many tokens tho
 Claude's response - "Yes — it's finished. I'm not making further changes."
 
 ### 7. (new session, deleted CLAUDE.md, PLAN.md, ROADMAP.md, only INFO.md left)
+>rate the website, 1-10, evaluate it, do not run any git commands, do not check prompts.md, assume INFO.md is true, do not re-verify.
+
+>at the end:
+>make a VERDICT.md at the repo root saying your verdict on this website, sellable / no? good / bad and why, make the specs and check them.
