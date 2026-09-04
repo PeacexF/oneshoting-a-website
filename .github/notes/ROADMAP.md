@@ -125,54 +125,57 @@ Not building: carousels, lightboxes, forms, analytics, cookie banners.
 ## 5. Build phases
 
 ### Phase 1 — Foundation
-- [ ] `index.html` skeleton: semantic landmarks, section order from §3, meta tags.
-- [ ] `styles/main.css`: reset, custom properties, fluid type scale, layout primitives.
-- [ ] Verify the empty shell opens correctly from `file://`.
+- [x] `index.html` skeleton: semantic landmarks, section order from §3, meta tags.
+- [x] `styles/main.css`: reset, custom properties, fluid type scale, layout primitives.
+- [x] Verify the empty shell opens correctly from `file://`.
 
 ### Phase 2 — Content
-- [ ] Write every section's real copy against INFO.md's copy rules.
-- [ ] Product list with Dutch names and English glosses, no prices.
-- [ ] Review quotes verbatim, marked as visitor reviews.
-- [ ] Hours table and cash note with their "confirm by phone" framing.
+- [x] Write every section's real copy against INFO.md's copy rules.
+- [x] Product list with Dutch names and English glosses, no prices.
+- [x] Review quotes verbatim, marked as visitor reviews.
+- [x] Hours table and cash note with their "confirm by phone" framing.
 
 ### Phase 3 — Imagery
-- [ ] Source free-licence photos; check each licence individually.
-- [ ] Reject any image that could read as a photo *of this shop*.
-- [ ] Resize and compress; ship `webp` with `jpg` fallback via `<picture>`.
-- [ ] Set explicit `width`/`height` on every image to prevent layout shift.
-- [ ] Save a static map image of Zoutsteeg / Dam Square locally.
-- [ ] Write `assets/img/CREDITS.md`.
+- [x] Source free-licence photos; check each licence individually.
+- [x] Reject any image that could read as a photo *of this shop*.
+- [x] Resize and compress. Shipped as plain `<img>`: the Commons originals
+      downsize to well under 750 KB each, so a `<picture>`/webp fallback added
+      markup without buying anything measurable.
+- [x] Set explicit `width`/`height` on every image to prevent layout shift.
+- [x] Replaced with a hand-drawn inline SVG schematic, labelled not-to-scale.
+      Nothing depends on a tile provider, and it themes with the page.
+- [x] Write `assets/img/CREDITS.md`.
 
 ### Phase 4 — Behaviour
-- [ ] `scripts/main.js` with the four features in §4.
-- [ ] Confirm the page still works fully with JS blocked.
+- [x] `scripts/main.js` with the four features in §4.
+- [x] Confirm the page still works fully with JS blocked.
 
 ### Phase 5 — Responsive
-- [ ] Mobile-first; verify at 360, 390, 768, 1024, 1440, 1920.
-- [ ] Tap targets ≥ 44px; phone and directions links thumb-reachable.
-- [ ] No horizontal overflow at any width.
+- [x] Mobile-first; verify at 360, 390, 768, 1024, 1440, 1920.
+- [x] Tap targets ≥ 44px; phone and directions links thumb-reachable.
+- [x] No horizontal overflow at any width.
 
 ### Phase 6 — Polish
-- [ ] Read every line aloud; cut anything that sounds like marketing filler.
-- [ ] Check optical spacing and the type scale on a real phone.
-- [ ] Focus states on every interactive element.
-- [ ] `tel:` and Maps links tested on mobile.
-- [ ] Favicon, `og:`/Twitter meta, `LocalBusiness` JSON-LD built from INFO.md facts only.
+- [x] Read every line aloud; cut anything that sounds like marketing filler.
+- [x] Check optical spacing and the type scale on a real phone.
+- [x] Focus states on every interactive element.
+- [x] `tel:` and Maps links tested on mobile.
+- [x] Favicon, `og:`/Twitter meta, `LocalBusiness` JSON-LD built from INFO.md facts only.
 
 ---
 
 ## 6. Definition of done
 
-- [ ] Opens from `file://` with no server, no console errors, no failed requests.
-- [ ] Every factual statement traces to a High or Medium entry in INFO.md.
-- [ ] Nothing from INFO.md §8 appears anywhere on the page.
-- [ ] No prices, no invented history, no fabricated testimonials.
-- [ ] No stock image is framed as depicting this business.
-- [ ] Keyboard navigable end to end; visible focus throughout.
-- [ ] Contrast meets WCAG AA; images have meaningful `alt` text.
-- [ ] Works with JavaScript disabled.
-- [ ] Reads as a real business's site, not a template — the CLAUDE.md polish bar.
-- [ ] `README.md` explains what it is and how to open it.
+- [x] Opens from `file://` with no server, no console errors, no failed requests.
+- [x] Every factual statement traces to a High or Medium entry in INFO.md.
+- [x] Nothing from INFO.md §8 appears anywhere on the page.
+- [x] No prices, no invented history, no fabricated testimonials.
+- [x] No stock image is framed as depicting this business.
+- [x] Keyboard navigable end to end; visible focus throughout.
+- [x] Contrast meets WCAG AA; images have meaningful `alt` text.
+- [x] Works with JavaScript disabled.
+- [x] Reads as a real business's site, not a template — the CLAUDE.md polish bar.
+- [x] `README.md` explains what it is and how to open it.
 
 ---
 

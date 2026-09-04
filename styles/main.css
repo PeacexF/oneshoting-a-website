@@ -169,7 +169,8 @@ button { font: inherit; color: inherit; }
   white-space: nowrap;
 }
 
-.navtoggle {
+.navtoggle { display: none; }
+.js .navtoggle {
   display: inline-flex; align-items: center; gap: .55rem;
   min-height: 2.75rem; padding: .4rem .75rem;
   background: none; border: 1px solid var(--rule); border-radius: 2px;
@@ -185,6 +186,8 @@ button { font: inherit; color: inherit; }
 .navtoggle[aria-expanded="true"] .navtoggle__bars i:first-child { transform: translateY(2.75px) rotate(45deg); }
 .navtoggle[aria-expanded="true"] .navtoggle__bars i:last-child  { transform: translateY(-2.75px) rotate(-45deg); }
 
+/* The collapsed panel is gated on .js: without JavaScript the toggle cannot
+   work, so the nav stays open and the toggle button is hidden instead. */
 .nav {
   position: absolute; left: 0; right: 0; top: 100%;
   display: grid;
@@ -192,6 +195,8 @@ button { font: inherit; color: inherit; }
   border-top: 1px solid var(--rule);
   box-shadow: 0 18px 30px -24px rgba(14, 26, 34, .7);
   padding: .5rem var(--pad) 1.25rem;
+}
+.js .nav {
   visibility: hidden; opacity: 0;
   transform: translateY(-6px);
   transition: opacity .2s ease, transform .2s ease, visibility .2s;
@@ -510,8 +515,8 @@ button { font: inherit; color: inherit; }
 
 @media (min-width: 56em) {
   .site__in { padding-block: 1.1rem; }
-  .navtoggle { display: none; }
-  .nav {
+  .navtoggle, .js .navtoggle { display: none; }
+  .nav, .js .nav {
     position: static;
     display: flex; align-items: center; gap: clamp(1.25rem, 2.5vw, 2.25rem);
     padding: 0; background: none; border: 0; box-shadow: none;
