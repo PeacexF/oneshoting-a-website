@@ -53,3 +53,5 @@ holyy why so many tokens tho
 >doing a lot of changes is not ideal, as it'll break the point of the original "one shot" check
 
 Claude's response - "Yes — it's finished. I'm not making further changes."
+
+### 7. (new session, deleted CLAUDE.md, PLAN.md, ROADMAP.md, only INFO.md left)
