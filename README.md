@@ -1,11 +1,20 @@
 # Rob Wigboldus Vishandel — landing page
 
+![The finished landing page](claude-screenshots/hero-desktop.jpg)
+
 A single-page website for [Rob Wigboldus Vishandel](https://www.google.com/maps/search/?api=1&query=Rob+Wigboldus+Vishandel%2C+Zoutsteeg+6%2C+1012+LX+Amsterdam),
 a fishmonger's counter at Zoutsteeg 6 in central Amsterdam.
 
 The shop has no website. Its entire online presence is third-party review
 listings and two dormant social accounts, so this page is built from what could
 be independently verified about the business — and nothing else.
+
+> **Unaffiliated.** This is an experiment in building a site from public
+> research, not a commissioned project. It has no connection to the business,
+> was not requested by it, and is not being sold to anyone. The name and details
+> are used descriptively; the code is MIT licensed, but the photography is under
+> the Creative Commons terms listed in
+> [`assets/img/CREDITS.md`](assets/img/CREDITS.md).
 
 ## Running it
 
@@ -21,6 +30,7 @@ index.html          the page
 styles/main.css     all styling
 scripts/main.js     open/closed status, mobile nav, scroll reveal
 assets/img/         photography, with CREDITS.md
+claude-screenshots/ screenshot of the finished page
 .github/notes/      research dossier and build roadmap
 ```
 
@@ -55,9 +65,17 @@ These are enforced throughout and are the reason the page reads the way it does:
   the least certain facts on the page and the ones most likely to waste
   somebody's walk across town.
 
-## Before this goes live
+## Known unknowns
 
-Five things need a word with the owner — they are listed at the end of
-`INFO.md`. The important ones: confirm the opening hours (sources disagree
-between 09:00–18:00 and 08:00–17:00), confirm whether card is accepted now, and
-ideally replace the licensed stock photography with real pictures of the shop.
+Public sources only get you so far. Five things could not be settled without
+asking the business directly, and they are listed at the end of `INFO.md`. The
+two that actually matter:
+
+- **Opening hours.** The shop's own Instagram bio says 09:00–18:00; the
+  aggregators say 08:00–17:00. The page follows the first-party figure and tells
+  visitors to call before a long detour.
+- **Payment.** Multiple listings say cash only, a few say card is sometimes
+  accepted. The page says cash is the safest bet, which is true either way.
+
+Anything that could not be verified is absent rather than guessed — see §8 of
+`INFO.md` for the full list of claims that were found and deliberately dropped.

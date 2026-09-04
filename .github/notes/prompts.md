@@ -18,10 +18,32 @@
 · Should the roadmap include deployment and repo tooling, or only the page build? (Page + GitHub Pages deploy (Recommended) / Page only / Page + deploy + QA checks)
 
 I chose:
-Plain static HTML/CSS/JS (Recommended)
-Free-license stock, curated (Recommended)
-English, with Dutch product names (Recommended)
-Page only
+Plain static HTML/CSS/JS (Recommended) [note: i like he fact that plain html is the reccomended option here, cuz it really is just 1 page and no framework is needed.].  
+Free-license stock, curated (Recommended).  
+English, with Dutch product names (Recommended).  
+Page only.  
 
 ### 2.
 > run the git commands too, the whole project is basically an experiment of whether you are capable of fully running a dev proccess and able to build a website baseo on prior research. Go autonomous, finish it.
+
+i'm lowkey impressed he added a jsonld immediately, without a single word said about SEO, probbaly because of plan.md specifications
+
+### 3.
+> it's running via live server on http://127.0.0.1:5500/index.html, you can check it
+
+(he kinda got lost in the browser)
+(also claude's chrome session casually collapsing a browser while you trying to study is probably not the best feature anthropic made, i feel like it should start a separate page for it)
+
+holyy why so many tokens tho
+>✽ Brewing… (15m 47s · ↓ 60.3k tokens)
+
+### 4.
+>add the screenshots you made into ./claude-screenshots at the repo root, but cut all metadata via exiftool -all= >-overwrite_original
+>
+>it is not going to the owner btw, just an experiment, as i stated before, i'm not realistically selling that to anybody. It >is also an open repo under MIT.
+>
+>on git commands:
+>git add - only git add ., update the whole state. switch to main and work only from there, i merged it on github.
+
+### 5.
+> include the screenshot into the README
